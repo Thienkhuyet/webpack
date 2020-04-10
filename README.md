@@ -28,6 +28,10 @@ To create a development build:
 npm run build-dev
 ```
 
+## pre-commit
+
+npm run eslint -t check error style code
+
 ## Running
 
 Open the file `dist/index.html` in your browser
