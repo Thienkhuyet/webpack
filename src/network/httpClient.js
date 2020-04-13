@@ -1,6 +1,6 @@
 import Axios from "axios";
 const commonConfig = {
-  baseUrl: "http://",
+  baseUrl: "https://covid19.mathdro.id/api/",
   transfromresponses: [
     (data) => {
       return data;
@@ -12,7 +12,6 @@ const commonConfig = {
     return status >= 200 && status < 300;
   },
   headers: {
-    "Fineract-Platform-TenantId": "default",
     "Content-Type": "application/json;charset=UTF-8",
   },
 };

@@ -14,7 +14,7 @@ import dva, { connect } from "dva";
 import RouterConfig from "./router/RouterConfig";
 import { createHashHistory } from "history";
 import createLoading from "dva-loading";
-
+import ncovi_19 from "./models/ncovi/ncovi_19";
 //import "./style.css";
 
 // 1. Initialize
@@ -22,18 +22,7 @@ const app = dva();
 app.use(createLoading());
 
 // 2. Model
-app.model({
-  namespace: "count",
-  state: 0,
-  reducers: {
-    add(count) {
-      return count + 1;
-    },
-    minus(count) {
-      return count - 1;
-    },
-  },
-});
+app.model(ncovi_19);
 
 // 3. View
 

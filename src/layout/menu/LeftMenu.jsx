@@ -6,14 +6,10 @@ import "./LeftMenu.scss";
 const { SubMenu } = Menu;
 
 class LeftMenu extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            theme: 'dark',
-            current: '1',
-        };
-    }
-
+    state = {
+        theme: 'dark',
+        current: '1',
+    };
 
     changeTheme = value => {
         this.setState({
