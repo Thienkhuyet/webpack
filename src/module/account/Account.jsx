@@ -42,7 +42,7 @@ class Account extends React.Component {
                     }}
                     options={{
                         legend: { display: false },
-                        title: { display: true, text: `Current state in ${nameCountries}` },
+                        title: { display: true, text: `Current state in ${nameCountries}`, position: 'bottom' },
                     }}
                 />
             ) : null
@@ -76,7 +76,15 @@ class Account extends React.Component {
             <div className="content">
                 <div>
                     <label>View detail countrie: </label>
-                    <Select value={nameCountries} style={{ width: 420 }} onChange={this.handleChange}>
+                    <Select
+                        showSearch
+                        optionFilterProp="children"
+                        filterOption={(input, option) =>
+                            option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+                        }
+                        value={nameCountries}
+                        style={{ width: 420 }}
+                        onChange={this.handleChange}>
                         <Option key={'1'} value={""}>Global</Option>
                         {renderCountries}
                     </Select>

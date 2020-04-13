@@ -3,6 +3,7 @@ import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/ico
 import { hot } from 'react-hot-loader/root';
 import React from 'react';
 import "./LeftMenu.scss";
+import { Link } from 'react-router-dom';
 const { SubMenu } = Menu;
 
 class LeftMenu extends React.Component {
@@ -44,8 +45,14 @@ class LeftMenu extends React.Component {
                             </span>
                         }
                     >
-                        <Menu.Item key="1">Option 1</Menu.Item>
-                        <Menu.Item key="2">Option 2</Menu.Item>
+                        <Menu.Item key="1">
+                            <Link to="/">Ncovi-19</Link>
+
+                        </Menu.Item>
+                        <Menu.Item key="2">
+                            <Link to={"/api"}>Api</Link>
+
+                        </Menu.Item>
                         <Menu.Item key="3">Option 3</Menu.Item>
                         <Menu.Item key="4">Option 4</Menu.Item>
                     </SubMenu>
