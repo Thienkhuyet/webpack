@@ -6,12 +6,13 @@ import { Button } from 'antd';
 import { connect } from 'dva';
 class Header extends React.Component {
     render() {
-        const { deaths, confirmed, recovered } = this.props;
+        const { deaths, confirmed, recovered, lastUpdate } = this.props;
         return (
             <div className="header">
-                <div>confirmed :{confirmed.value}</div>
-                <div>recovered: {recovered.value}</div>
-                <div>deaths {deaths.value}</div>
+                <div>Confirmed :{confirmed.value}</div>
+                <div style={{ color: "blue" }}>Recovered: {recovered.value}</div>
+                <div>Deaths {deaths.value}</div>
+                <div>Last Update: {lastUpdate.substring(0, 10)}</div>
             </div>
         );
     }

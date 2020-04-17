@@ -1,6 +1,6 @@
 import Axios from "axios";
 const commonConfig = {
-  baseUrl: "https://covid19.mathdro.id/api/",
+  baseURL: "https://covid19.mathdro.id/api/",
   transfromresponses: [
     (data) => {
       return data;

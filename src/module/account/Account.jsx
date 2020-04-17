@@ -16,7 +16,8 @@ class Account extends React.Component {
     handleChange = (value) => {
         console.log(`selected ${value}`);
         this.setState({ nameCountries: value });
-        this.props.dispatch({ type: "ncov-19/ncoviCountries", payload: value });
+        value ? this.props.dispatch({ type: "ncov-19/ncoviCountries", payload: value }) :
+            this.props.dispatch({ type: "ncov-19/global" });
     }
     render() {
         const { nameCountries } = this.state;
@@ -93,6 +94,7 @@ class Account extends React.Component {
                     {nameCountries ? barChart : lineChart}
                     {/* {lineChart}
                     {barChart} */}
+                    <img src="https://covid19.mathdro.id/api/og" width="700" height="400"></img>
                 </div>
             </div>
         );
